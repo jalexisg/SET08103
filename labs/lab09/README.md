@@ -155,7 +155,18 @@ If you go back to GitHub and look up your Releases you will see the new release 
 
 ![Release on GitHub](img/github-release.png)
 
-## Deploying to Google Cloud Engine
+
+> Publishing the build jar file as release on Github is the end of the required functionality for the lab.
+>
+> You can make use of Google Cloud Engine to deploy the application to the cloud.
+> This step requires the development of an additional interface for the web.
+>
+
+
+
+## Optional: Deploying to Google Cloud Engine
+
+_The following steps are optional and not required for the successful completion of the CW._
 
 This tutorial is adapted from [Google's documentation](https://cloud.google.com/solutions/continuous-delivery-with-travis-ci).  **First, you will need to create Google Cloud Account.  You should have received an email telling you how to sign-up for a free Google Cloud Account associated with your University email.**  Once you have registered continue on.
 
