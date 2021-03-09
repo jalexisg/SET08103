@@ -8,7 +8,7 @@
 | 5 | [Lecture 07: The First Way of DevOps - Flow](lectures/lecture07) <br> [Lecture 08: Kanban](lectures/lecture08) | [Lab 04: Task Management and Kanban](labs/lab04) | |
 | 6 | [Lecture 09: Requirements Gathering](lectures/lecture09) <br> [Lecture 10: User Stories and Use Cases](lectures/lecture10) | [Lab 05: Use Cases and Use Case Diagrams](labs/lab05) | |
 | 7 | [Lecture 11: UML Diagrams](lectures/lecture11) <br> [Lecture 12: UML Workflow](lectures/lecture12) | [Lab 06: UML](labs/lab06) | Code Review 2 |
-| 8 | [Lecture 13: The Second Way of DevOps - Feedback](lectures/lecture13) <br> [Lecture 14Test-Driven Development (TDD)](lectures/lecture14) | [Lab 07: Unit Testing](labs/lab07) | |
+| 8 | [Lecture 13: The Second Way of DevOps - Feedback](lectures/lecture13) <br> [Lecture 14: Test-Driven Development (TDD)](lectures/lecture14) | [Lab 07: Unit Testing](labs/lab07) | |
 | 9 | [Lecture 15: Continuous Integration](lectures/lecture15) <br> [Lecture 16: Continuous Delivery](lectures/lecture16) | [Lab 08: Integration Testing](labs/lab08) | |
 | 10 | [Lecture 17: Deployment](lectures/lecture17) <br> [Lecture 18: Monitoring Software](lectures/lecture18) | [Lab 09: Deployment](labs/lab09) | Code Review 3 |
 | 11 | [Lecture 19: Bug Tracking](lectures/lecture19) <br> [Lecture 20: The Third Way of DevOps - Continuous Experimentation and Learning](lectures/lecture20) | [Lab 10: Bug Tracking](labs/lab10) | |
