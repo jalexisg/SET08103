@@ -25,7 +25,7 @@ Group times are available [here](groups).
 
 You will work on the project as a Scrum team.  Details on Scrum are provided in [Lecture 2](../lectures/lecture02), including an FAQ on how to apply Scrum in the module.
 
-You work for an organisation that requires reporting on population information.  You have been tasked with designing and implementing a new system to allow easy access to this population information.  The organisation has provided you with an SQL database to work from available [here](http://downloads.mysql.com/docs/world.sql.zip).
+You work for an organisation that requires reporting on population information.  You have been tasked with designing and implementing a new system to allow easy access to this population information.  The organisation has provided you with an SQL database to work from available [here](https://downloads.mysql.com/docs/world-db.zip).
 
 The organisation has asked for the following reports to be generated:
 
@@ -287,4 +287,4 @@ The final deliverable will be compared automatically to your GitHub repository. 
 - Continuous integration working.
 - Kanban/Project Board being used.
 - Quality and coverage of unit tests.
-- Project requirements met.
+- Project requirements met.//
