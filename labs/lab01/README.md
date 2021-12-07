@@ -248,9 +248,9 @@ We now know that everything is working so far.  So let us commit the changes.  T
 2. Add the new file to the staging area by selecting it under unversioned files. 
 3. Make sure the author is updated, and add a suitable commit message before clicking **Commit**.
 
-   ![Add and Commit](Commit_App.png)
+   ![Add and Commit](img/Commit_App.png)
 
-3. Push the changes - **VCS**, **Git**, then **Push**.  Click **Push** in the **Push Commit** window.
+3. Push the changes to GitHub -  **Git**, then **Push**.  Click **Push** in the **Push Commit** window.
 
 **Get used to this process - it will save your code from disaster!**.  We have again created a checkpoint where we know our code is working and doing what we expect.  Whenever you do a change - and make your changes small - and tested the build works, commit and push.  I will remind you a few more times, but this is a habit for you to form.
 
