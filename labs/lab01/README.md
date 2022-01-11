@@ -14,12 +14,12 @@ These provide a modern software development and delivery environment.  These too
 
 After this lab you will be able to:
 
-- [ ] **Setup** a *development environment in IntelliJ.*
-- [ ] **Setup** a *GitHub repository.*
-- [ ] **Pull** a *Docker container.*
-- [ ] **Manage** a *Docker container using basic commands.*
-- [ ] **Define** a *Dockerfile to create your own container.*
-- [ ] **Deploy** to a *Docker container from IntelliJ.*
+- **Setup** a *development environment in IntelliJ.*
+- **Setup** a *GitHub repository.*
+- **Pull** a *Docker container.*
+- **Manage** a *Docker container using basic commands.*
+- **Define** a *Dockerfile to create your own container.*
+- **Deploy** to a *Docker container from IntelliJ.*
 
 ## IntelliJ Setup
 
@@ -245,7 +245,7 @@ Now select **Build** from the main menu, and then **Build Project**.  If all goe
 We now know that everything is working so far.  So let us commit the changes.  The steps to follow:
 
 1. Open the Commit dialogue  **Git** then **Commit**.
-2. Add the new file to the staging area by selecting it under unversioned files. 
+2. Add the new file to the staging area by selecting it under unversioned files.
 3. Make sure the author is updated, and add a suitable commit message before clicking **Commit**.
 
    ![Add and Commit](img/Commit_App.png)
@@ -283,7 +283,7 @@ If Docker is working correctly you should get the following output:
 ```shell
 Unable to find image 'hello-world:latest' locally
 latest: Pulling from library/hello-world
-9db2ca6ccae0: Pull complete 
+9db2ca6ccae0: Pull complete
 Digest: sha256:4b8ff392a12ed9ea17784bd3c9a8b1fa3299cac44aca35a85c90c5e3c7afacdc
 Status: Downloaded newer image for hello-world:latest
 
@@ -503,11 +503,11 @@ When executed you will get the following output:
 Sending build context to Docker daemon  2.048kB
 Step 1/2 : FROM ubuntu:latest
 latest: Pulling from library/ubuntu
-6b98dfc16071: Pull complete 
-4001a1209541: Pull complete 
-6319fc68c576: Pull complete 
-b24603670dc3: Pull complete 
-97f170c87c6f: Pull complete 
+6b98dfc16071: Pull complete
+4001a1209541: Pull complete
+6319fc68c576: Pull complete
+b24603670dc3: Pull complete
+97f170c87c6f: Pull complete
 Digest: sha256:5f4bdc3467537cbbe563e80db2c3ec95d548a9145d64453b06939c4592d67b6d
 Status: Downloaded newer image for ubuntu:latest
  ---> 113a43faa138
