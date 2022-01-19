@@ -152,7 +152,7 @@ New projects are started by default on a branch called *main* but IntelliJ uses 
 
 Now we can create a new repository. In GitHub, you will see a **+** near the top of the page, which you can select **New repository** from:
 
-![GitHub New Repository](C:/Users/KevL/Dropbox/Teaching/2021-2022-02-SET08103%20SET08403%20Software%20Engineering%20Methods/SET08103/labs/lab01/img/github-new-repo.png)
+![GitHub New Repository](img/github-new-repo.png)
 
 This will open a new window.  You need to enter the name for the repository (`sem`), make sure the repository is **Public** and then select the **Apache 2.0** license type.  **Ensure that no README is added or `.gitignore`**.  You have one already.  This details are illustrated below:
 
