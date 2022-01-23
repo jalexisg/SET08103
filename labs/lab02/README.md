@@ -187,7 +187,7 @@ Now go through our Git update steps:
 
 Now if you go to your GitHub page you should see the following:
 
-![2022-01-23 20_04_29-Window](img\2022-01-23 20_04_29-Window.png) 
+![2022-01-23 20_04_29-Window](img/2022-01-23 20_04_29-Window.png) 
 
 
 And now we have our project automatically building on pushes to GitHub, and the current build status
@@ -210,7 +210,7 @@ And then update your GitHub repository:
 
 If you go to your repository's dashboard in GitHub you should see your new badges.
 
-![badges](img\badges.png)
+![badges](img/badges.png)
 
 
 
@@ -662,8 +662,6 @@ Now to create a release on GitHub.  Go to the GitHub page for your project and s
 ![GitHub Releases](img/new_release1.png)
 
 Click **Create new release** to start entering the release details:
-
-![GitHub Release Details](img/github-release-details.png)
 
 The details we want are below:
 
