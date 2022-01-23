@@ -148,7 +148,7 @@ jobs:
 
 To sync our local version do a pull from IntelliJ 
 
-![1642967004914](img\1642967004914.png)
+![1642967004914](img/1642967004914.png)
 
 To check if our CI workflow is working make some changes and push them to GitHub
 
@@ -159,7 +159,7 @@ To check if our CI workflow is working make some changes and push them to GitHub
 
 Now we can go to GitHub see if our build was successful.  
 
-![1642967431174](img\1642967431174.png)
+![1642967431174](img/1642967431174.png)
 
 You can click on the **action** to show more details of the build.
 
