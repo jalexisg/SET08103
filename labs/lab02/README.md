@@ -171,7 +171,7 @@ The stages shown above duplicate the stages in our workflow file that we defined
 
 You might have seen build status badges on GitHub before like this one:
 
-[![Build Status](https://travis-ci.org/kevin-chalmers/sem.svg?branch=master)](https://travis-ci.org/kevin-chalmers/sem)
+![Build Status](img/build_passing.png)
 
 You can add the badge for your build status to your `README.md` file as well.  To do this, add the following text to your `Readme.md` file
 
@@ -435,7 +435,7 @@ We are going to undertake the following steps:
 1. Create a self-contained JAR for our project - this will include any external libraries.
 2. Add a network bridge to docker.
 3. Update our code files, Dockerfile, and MongoDB instance.
-4. Update Travis CI build file.
+4. Update GitHub Actions build file.
 
 #### Creating a Self-contained JAR
 
@@ -597,7 +597,7 @@ We have a few more Docker commands but these are just the ones we added via Inte
 2. Create commit.
 3. Push to GitHub.
 
-Check with Travis CI and ensure that not only is the project building but that it successfully runs in Docker.  You will need to open some of the code folds to verify.
+Check with GitHub Actions and ensure that not only is the project building but that it successfully runs in Docker.  You will need to open some of the code folds to verify.
 
 ### Merging Feature
 
@@ -703,7 +703,7 @@ This is our current workflow.  This is an important set of steps so document the
 1. Pull the latest `develop` branch.
 2. Start a new feature branch.
 3. Once feature is finished, create JAR file.
-4. Update and test Docker configuration with Travis.
+4. Update and test Docker configuration with GitHub Actions.
 5. Update feature branch with `develop` to ensure feature is up-to-date.
 6. Check feature branch still works.
 7. Merge feature branch into `develop`.
