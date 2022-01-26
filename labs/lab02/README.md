@@ -156,7 +156,7 @@ Now we can go to GitHub see if our build was successful.
 
 You can click on the **action** to show more details of the build.
 
-![2022-01-23 19_52_58-Window](img\2022-01-23 19_52_58-Window.png)
+![2022-01-23 19_52_58-Window](img/action1.png)
 
 The stages shown above duplicate the stages in our workflow file that we defined above main.yml
 
@@ -180,7 +180,7 @@ Now go through our Git update steps:
 
 Now if you go to your GitHub page you should see the following:
 
-![2022-01-23 20_04_29-Window](img/2022-01-23 20_04_29-Window.png) 
+![2022-01-23 20_04_29-Window](img/commit1.png) 
 
 
 And now we have our project automatically building on pushes to GitHub, and the current build status
@@ -281,7 +281,7 @@ With `mongo:latest` selected, click the **plus sign** to **Create Container**.  
 
 Add the run options from the Modify Options Link
 
-![IntelliJ Create Container](img/2022-01-23 21_29_37-Create Docker Configuration.png)
+![IntelliJ Create Container](img/createMongo.png)
 
 MongoDB is a server application which listens on port 27017.  We could just open that port, but just in case MongoDB is already running locally we will switch ports.  We looked at this in the last lab.  In the **Run Options** text box add **-p 27000:27017** as shown in the image.  Then click **Run**.  IntelliJ will start the container and it will be waiting for you to use.
 
@@ -504,13 +504,13 @@ This will have created a new network called `se-methods`.  We can use this netwo
 
 First we need to stop our current MongoDB server.  In IntelliJ you should be able to see this in the Services panel under **Containers**.  To stop it, select the container and **click** the **red stop button** on the left:
 
-![IntelliJ Docker Container List](img/2022-01-23 21_39_23-Window.png)
+![IntelliJ Docker Container List](img/containers.png)
 
 Once stopped, **right-click** on the container, and select **Delete Container** and then **Yes** in the prompt.
 
 We need to create a new MongoDB server that uses our network infrastructure, and we also want to define the name of the server.  We do this by creating a new container from `mongo:latest` in IntelliJ using the following parameters:
 
-![MongoDB Container Settings](img/2022-01-23 21_42_53-Create Docker Configuration.png)
+![MongoDB Container Settings](img/dockerconfig.png)
 
 Click **Run** and the container will start.  Next we need to update our main application so it can talk to this MongoDB server.  The only line that needs updating is the `MongoClient` creation one:
 
@@ -537,11 +537,11 @@ We have changed what we are copying to the JAR file that has been created.  We a
 
 To test our new image, select **Create Container** with it selected and use the following properties:
 
-![Application Docker Settings](img/2022-01-23 21_45_57-Create Docker Configuration.png)
+![Application Docker Settings](img/dockerconfig.png)
 
 Click **Run** and our container will start our application which will connect to the MongoDB server and exit.  If successful you will see output on the container logs
 
-![Container Logs](img/2022-01-23 21_52_36-lab02 – Dockerfile.png)
+![Container Logs](img/containerlogs.png)
 
 
 Time for an update to GitHub. 
