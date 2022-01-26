@@ -211,7 +211,7 @@ services:
     restart: always
 ```
 
-When running Docker from the command line, we use `docker-compose up` to build and run a composed service.  IntelliJ understands Docker compose files, so we don't have to worry.  We will modify our Travis CI file.
+When running Docker from the command line, we use `docker-compose up` to build and run a composed service.  IntelliJ understands Docker compose files, so we don't have to worry.  We will modify our GitHub Actions file.
 
 ### Test MySQL Connection
 
@@ -681,7 +681,7 @@ Our current process has not changed from last week, except we are now using GitH
 2. Pull the latest `develop` branch.
 3. Start a new feature branch for the issue.
 4. Once feature is finished, create JAR file.
-5. Update and test Docker configuration with Travis.
+5. Update and test Docker configuration with GitHub Actions.
 6. Update feature branch with `develop` to ensure feature is up-to-date.
 7. Check feature branch still works.
 8. Merge feature branch into `develop`.
