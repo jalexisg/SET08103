@@ -6,7 +6,7 @@ Group times are available [here](groups).
 
 | | |
 | --- | --- |
-| Module number | SET08103 |
+| Module number | SET08103-SET08403 |
 | Module title | Software Engineering Methods |
 | Module leader | Kevin Sim |
 | Tutor with responsibility for this Assessment. Student's first point of contact. | As above. |
@@ -14,7 +14,7 @@ Group times are available [here](groups).
 | Weighting | 60% of module assessment |
 | Size and/or time limits for assessment | See description below. |
 | Deadline of submission | Your attention is drawn to the penalties for late submissions.  See details below. |
-| Arrangements for submission | Coursework to be submitted via GitHub. |
+| Arrangements for submission | Coursework to be submitted via Moodle and GitHub. |
 | Assessment Regulations | All assessments are subject to the University Regulations |
 | The requirements for the assessment | See below. |
 | Special instructions | N/A |
@@ -113,7 +113,7 @@ For the population reports, the following information is requested:
 
 The coursework **must** be delivered by a group.  The aim of the module is to assess your ability to work as a team to deliver a product.  Therefore, the majority of your coursework grade will be based on your team's ability to work together using the methods defined in the module.
 
-The submission is monitored during lab stand-up meetings, and formally via the 5 assessment points.  Your final submission is delivered via your GitHub repository which should also be submitted to Moodle.
+The submission is monitored during lab stand-up meetings, and formally via the 5 assessment points.  Your submissions are delivered via your GitHub repository. The master branch of your GitHub repository should also be submitted to Moodle at each assessment point along with a spreadsheet in Excel format (csv, xls or xlsx) detailing Individual team members' contributions.
 
 ## Individual Assessment
 
@@ -160,7 +160,7 @@ Note that Teaching starts in Week 2. Week Commencing 25th January
 4. Week 13 Code Review 4 (20% of CW mark).
 5. Week 13 Final submission (20% of CW Mark)
 
-The code reviews will take place during your usual Lab sessions.  Each group will be given **10 minutes maximum** for the code review.  Your group will be **allocated a time for the code review**.  The details of the individual review points are below.  These meetings **must be attended** at the **stated time**.  Guidelines for grading the group:
+The code reviews will take place during your usual Lab sessions.  Each group will be given **15 minutes maximum** for the code review.  Your group will be **allocated a time for the code review**.  The details of the individual review points are below.  These meetings **must be attended** at the **stated time**.  Guidelines for grading the group:
 
 - **Being late** for the meeting or **not being ready** when the meeting starts will result in the grade for that review being capped at 40%.
 - **Not attending** the meeting will mean the code review will be marked at 0%.
@@ -179,14 +179,14 @@ The aim of this code review meeting is to check that the project workflow is set
 
 The following must be in place:
 
-- [ ] GitHub project for coursework set-up.
-- [ ] Product Backlog created.
-- [ ] Project builds to self-contained JAR with Maven.
-- [ ] Dockerfile for project set-up and works.
-- [ ] GitHub Actions for project set-up and build is working using JAR, and Docker on GitHub Actions.
-- [ ] Correct branches for GitFlow workflow created - includes `master`, `develop`, and `release` branches.
-- [ ] First release created on GitHub.
-- [ ] Code of Conduct defined.
+-  GitHub project for coursework set-up.
+-  Product Backlog created.
+-  Project builds to self-contained JAR with Maven.
+-  Dockerfile for project set-up and works.
+-  GitHub Actions for project set-up and build is working using JAR, and Docker on GitHub Actions.
+-  Correct branches for GitFlow workflow created - includes `master`, `develop`, and `release` branches.
+-  First release created on GitHub.
+-  Code of Conduct defined.
 
 #### Graded Criteria Submission 1 (4% of CW mark)
 
@@ -205,13 +205,13 @@ The aim of this code review is to check that task management is set-up and that 
 
 The following must be in place:
 
-- [ ] Issues being used on GitHub.
-- [ ] Tasks defined as user stories.
-- [ ] Project integrated with Zube.io.
-- [ ] Kanban/Project Board being used.
-- [ ] Sprint Boards being used.
-- [ ] Full use cases defined.
-- [ ] Use case diagram created.
+-  Issues being used on GitHub.
+-  Tasks defined as user stories.
+-  Project integrated with Zube.io.
+-  Kanban/Project Board being used.
+-  Sprint Boards being used.
+-  Full use cases defined.
+-  Use case diagram created.
 
 #### Graded Criteria Submission 2 (6% of CW mark)
 
@@ -234,9 +234,9 @@ The aim of this code review is to check that testing has been correctly specifie
 
 The following must be in place:
 
-- [ ] Suitable unit tests defined.
-- [ ] Suitable integration tests defined.
-- [ ] Tests running on GitHub Actions.
+-  Suitable unit tests defined.
+-  Suitable integration tests defined.
+-  Tests running on GitHub Actions.
 
 #### Graded Criteria Submission 3 (8% of CW mark)
 
@@ -260,8 +260,8 @@ The aim of this code review is to check that the project is deploying correctly.
 
 The following must be in place:
 
-- [ ] Deployment working.
-- [ ] Bug reporting system set-up.
+-  Deployment working.
+-  Bug reporting system set-up.
 
 #### Graded Criteria Submission 4 (10% of CW mark)
 

@@ -693,3 +693,67 @@ Our current process has not changed from last week, except we are now using GitH
 ## Exercise
 
 Follow the [SQL and Java tutorial](https://www.tutorialspoint.com/jdbc/) to explore this topic further.  You will find it useful.
+
+## Additional Notes
+
+The following supplementary notes are provided to allow quicker debugging and testing of SQL queries when using docker databases.
+
+So far we have used `docker-compose` to call two Dockerfile configuration scripts that create and run two Docker images that are connected on the same network (this is automatic using docker-compose)  
+
+Our `docker-compose` file shown below creates and runs 2 images.
+
+Lines 4-5 create an image called app (if it does not exist) using the Dockerfile in the root directory of our project (signified by a "." at the end of line 5 below)
+
+Lines 8-11 create an image called db using the Dockerfile in the directory name db/.
+
+```yml
+1	version: '3'
+2	services:
+3	  # Application Dockerfile is in same folder which is .
+4	  app:
+5	    build: .
+6	
+7	  # db is is db folder
+8	  db:
+9	    build: db/.
+10	    command: --default-authentication-plugin=mysql_native_password
+11	    restart: always
+```
+By running the Docker images using `docker-compose` the two containers can communicate on a shared network (something we did manually last week for a mongo database)
+
+However, we cannot see the MySQL database outside of the internal docker network. 
+
+To expose the database to the local machine we can set up port forwarding by adding the last line of the following to our `docker.compose.yml` file.
+
+```yml
+1	version: '3'
+2	services:
+3	  # Application Dockerfile is in same folder which is .
+4	  app:
+5	    build: .
+6	
+7	  # db is is db folder
+8	  db:
+9	    build: db/.
+10	    command: --default-authentication-plugin=mysql_native_password
+11	    restart: always
+12	    ports:
+13	      - "33060:3306"
+```
+
+This tells docker to forward requests from our local machine on port 33060 to port 3306 inside the docker container.
+
+We can now connect locally without having to do so from another docker container.
+
+IntelliJ allows database queries to be executed using a plugin named Database Navigator. To install this plugin select `File->Settings then Plugins` From the marketplace tab search for and install the plugin.
+
+![Database Plugin](img/databaseplugin.png)
+
+After doing this you should see a database tab on the right of IntelliJ where you can set up a new MySQL Connection
+
+![MySQL Connection](img/sqlconnection.png)
+
+This will allow you to test SQL queries before coding them in Java and testing in a docker container.
+
+
+

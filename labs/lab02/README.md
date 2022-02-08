@@ -474,7 +474,7 @@ First we must update our `pom.xml` file.  Add the following below the `dependenc
 
 We have added two new sections:
 
-1. `properties` - here we are telling Maven to produce Java 8 code (1.8).
+1. `properties` - here we are telling Maven to produce Java 10 code. Code compiled to Java 10 compliance will run on any version of Java from 10 upwards. The instructions for GitHub Actions later in this Lab use Java 11 as the execution environment so we must compile to a version of Java <= 11. 
 2. `build` - there is quite a bit going on here.  You can happily reuse the code though:
     - We are defining how Maven assembles the JAR file.
     - We are telling Maven which class to run when the JAR is executed (`mainClass`).
@@ -585,6 +585,8 @@ jobs:
         run: docker logs semcontainer
 
 ```
+
+Make sure your Maven configuration (pom.xml) is compiling to Java 10. (See above under the heading Creating a Self-contained JAR)
 
 We have a few more Docker commands but these are just the ones we added via IntelliJ or otherwise.  Now push this to GitHub:
 
