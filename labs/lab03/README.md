@@ -474,7 +474,7 @@ We are now ready to add the `Employee` class.
 
 #### Employee Class
 
-The `Employee` class is just data.  The full code listing is given below, and should be straightforward to understand.
+The `Employee` class is just data.  An example code listing is given below, and should be straightforward to understand. 
 
 ```java
 package com.napier.sem;
@@ -723,7 +723,7 @@ By running the Docker images using `docker-compose` the two containers can commu
 
 However, we cannot see the MySQL database outside of the internal docker network. 
 
-To expose the database to the local machine we can set up port forwarding by adding the last line of the following to our `docker.compose.yml` file.
+To expose the database to the local machine we can set up port forwarding by adding the last two lines of the following to our `docker.compose.yml` file.
 
 ```yml
 1	version: '3'
@@ -745,11 +745,11 @@ This tells docker to forward requests from our local machine on port 33060 to po
 
 We can now connect locally without having to do so from another docker container.
 
-IntelliJ allows database queries to be executed using a plugin named Database Navigator. To install this plugin select `File->Settings then Plugins` From the marketplace tab search for and install the plugin.
+IntelliJ allows database queries to be executed using a plugin named Database Navigator. To install this plugin select `File->Settings` then `Plugins` From the marketplace tab search for and install the plugin.
 
 ![Database Plugin](img/databaseplugin.png)
 
-After doing this you should see a database tab on the right of IntelliJ where you can set up a new MySQL Connection
+After doing this you should see a database tab on the right of IntelliJ where you can set up a new MySQL Connection. The fields should all be filled automatically with the exception of the password which is `example`
 
 ![MySQL Connection](img/sqlconnection.png)
 
