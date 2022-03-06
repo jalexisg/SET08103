@@ -58,7 +58,7 @@ Unit testing is now a **fundamental** part of software development and you shoul
 
 ## Getting Started with Unit Testing in Maven and IntelliJ
 
-Maven and IntelliJ both support unit testing as part of their workflows.  This means we can add the configuration for unit testing to our Maven file and IntelliJ will automatically understand what is happening.  It also allows us to run our unit tests via Travis CI later.
+Maven and IntelliJ both support unit testing as part of their workflows.  This means we can add the configuration for unit testing to our Maven file and IntelliJ will automatically understand what is happening.  It also allows us to run our unit tests via GitHub Actions later.
 
 ### Maven Configuration Code for JUnit
 
@@ -494,11 +494,8 @@ Change your workflow main.yml to the following
 
 ```yml
 name: A workflow for my Hello World App
-on:
-  push:
-    branches:
-      - master
-      - lab07
+on: push
+
 jobs:
   build:
     name: Hello world action

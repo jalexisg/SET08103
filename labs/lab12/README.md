@@ -56,3 +56,4 @@ We will only assess your `master` branch.  Make sure that branch contains the ve
 | **Total** | **100**   | **100** | **100**      | **100**   | **100** 
 
 The team need to agree these scores.  **If the team cannot agree, or a team member believes the spreadsheet submitted does not represent the actual contributions, then email the teaching team.**  In these circumstances, the metrics and other information provided on GitHub will be used.
+
