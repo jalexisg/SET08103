@@ -12,7 +12,7 @@ We have already seen how to generate a release on GitHub manually. GitHub action
 
 ### Updating the GitHub Actions Script
 
-We are going to modify our existing *build* stage in our GitHub Actions script so it pushes the built JAR file to GitHub Releases.  We could add this as a seperate stage but as the build stage already creates a jar file we will append our deployment action at the end of the stage.
+We are going to modify our existing *build* stage in our GitHub Actions script so it pushes the built JAR file to GitHub Releases.  We could add this as a separate stage but as the build stage already creates a jar file we will append our deployment action at the end of the stage.
 
 ```yml
       build:
@@ -265,13 +265,120 @@ Once happy with your changes merge them into master and push your changes to Git
 
 # Optional Extras
 
-The following sections of this lab are provided as additional resources that you can use to make interacting with the Application easier. For the coursework you only need to provide evidence that the reports have been generated, such as screenshots of the console. The following sections provide more intuitive ways to display the reports to the end user.
+The following sections of this lab are provided as additional resources that you can use to make interacting with the Application easier. For the coursework you only need to provide evidence that the reports have been generated, such as screenshots of the console (see [lab 12](../lab12/README.md)). The following sections provide more intuitive ways to display the reports to the end user.
+
+## Output the Reports to a GitHub Branch
+
+Currently we are outputting our reports to the console. In this section we are going to generate one of the reports to a markdown file within the docker container then get GitHub Actions to copy this report to a new branch in our repository. 
+
+The main method of the App is now:
+```java
+       // Create new Application and connect to database
+        App app = new App();
+
+        if (args.length < 1) {
+            app.connect("localhost:33060", 0);
+        } else {
+            app.connect(args[0], Integer.parseInt(args[1]));
+        }
+
+        ArrayList<Employee> employees = app.getSalariesByRole("Manager");
+        app.outputEmployees(employees, "ManagerSalaries.md");
+
+        // Disconnect from database
+        app.disconnect();
+```
+We use the following sql in the getSalariesByRole method replacing the 'Manager' with the role parameter passed to the method
+
+```sql
+SELECT employees.emp_no, employees.first_name, employees.last_name,
+titles.title, salaries.salary, departments.dept_name, dept_manager.emp_no
+FROM employees, salaries, titles, departments, dept_emp, dept_manager
+WHERE employees.emp_no = salaries.emp_no
+  AND salaries.to_date = '9999-01-01'
+  AND titles.emp_no = employees.emp_no
+  AND titles.to_date = '9999-01-01'
+  AND dept_emp.emp_no = employees.emp_no
+  AND dept_emp.to_date = '9999-01-01'
+  AND departments.dept_no = dept_emp.dept_no
+  AND dept_manager.dept_no = dept_emp.dept_no
+  AND dept_manager.to_date = '9999-01-01'
+  AND titles.title = 'Manager'
+```
+
+The method returns an `ArrayList<Employee>` which is output to file using the method `app.outputEmployees(employees, "ManagerSalaries.md"); which is listed below`
+
+```java
+    /**
+     * Outputs to Markdown
+     *
+     * @param employees
+     */
+    public void outputEmployees(ArrayList<Employee> employees, String filename) {
+        // Check employees is not null
+        if (employees == null) {
+            System.out.println("No employees");
+            return;
+        }
+
+        StringBuilder sb = new StringBuilder();
+        // Print header
+        sb.append("| Emp No | First Name | Last Name | Title | Salary | Department |                    Manager |\r\n");
+        sb.append("| --- | --- | --- | --- | --- | --- | --- |\r\n");
+        // Loop over all employees in the list
+        for (Employee emp : employees) {
+            if (emp == null) continue;
+            sb.append("| " + emp.emp_no + " | " +
+                    emp.first_name + " | " + emp.last_name + " | " +
+                    emp.title + " | " + emp.salary + " | "
+                    + emp.dept_name + " | " + emp.manager + " |\r\n");
+        }
+        try {
+            new File("./reports/").mkdir();
+            BufferedWriter writer = new BufferedWriter(new FileWriter(new                                 File("./reports/" + filename)));            
+            writer.write(sb.toString());
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+```
+
+This will produce a directory called reports with a file called `ManagerSalaries.md` 
+
+To copy the report from inside the docker container on GitHub Actions we need to add an action to our GitHub Actions yml file
+
+Add the following to the end of your yml file within the build and deploy stage. Note you will need to change the name of your container on the second line. For a project named `sem_employees` that uses docker_compose to build a container called `app`, GitHub Actions will name the container `sem_employees_app_1`
+```yml
+      - name: Copy Output
+        run: docker container cp sem_employees_app_1:./tmp/reports ./
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          branch: reports # The branch the action should deploy to.
+          folder: reports # The folder we are copying
+```
+
+If successful then we should have a new branch in our repository called reports containing the markdown file which should look like the following.
+
+| Emp No | First Name | Last Name | Title | Salary | Department | Manager |
+| --- | --- | --- | --- | --- | --- | --- |
+| 110039 | Vishwani | Minakawa | Manager | 106491 | Marketing | 110039 |
+| 110114 | Isamu | Legleitner | Manager | 83457 | Finance | 110114 |
+| 110228 | Karsten | Sigstam | Manager | 65400 | Human Resources | 110228 |
+| 110420 | Oscar | Ghazalie | Manager | 56654 | Production | 110420 |
+| 110567 | Leon | DasSarma | Manager | 74510 | Development | 110567 |
+| 110854 | Dung | Pesch | Manager | 72876 | Quality Management | 110854 |
+| 111133 | Hauke | Zhang | Manager | 101987 | Sales | 111133 |
+| 111534 | Hilary | Kambil | Manager | 79393 | Research | 111534 |
+| 111939 | Yuchang | Weedman | Manager | 58745 | Customer Service | 111939 |
+
 
 ## Converting to a Web App
 
-In this section we are going to modify our App to act as a Web Application. To do this we will create a REST service.  REST is just a form of application where we access resources via a URL.  
+Another option is to convert our application to act as a Web Application. This will take a bit of time and patience and is not required for  the coursework. 
 
-REST behaviour can be added to our Java application via the Java Spring Framework.  This just requires a few modifications to our Maven `pom.xml` file.
+To do this we will create a REST service.  REST is just a form of application where we access resources via a URL.  REST behaviour can be added to our Java application via the Java Spring Framework.  This just requires a few modifications to our Maven `pom.xml` file.
 
 ### Adding Spring
 
