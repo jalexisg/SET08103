@@ -1,5 +1,7 @@
 # SET08103/SET08403 Software Engineering Methods
 
+If you are trying to run Docker on the University machines you will get an error due to incorrect permissions. I have asked for this to be fixed but in the meantime the instructions in the following document provide a fix [DockerFix.md](DockerFix.md). 
+
 | Week | Lectures | Lab | Assessment |
 |------|----------|-----|------------|
 | 2 | [Lecture 01: Introduction to the Module](lectures/lecture01) <br> [Lecture 02: Scrum and Team Forming](lectures/lecture02) | [Lab 01: Setup](labs/lab01) | [Coursework Released](assessment)|
