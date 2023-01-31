@@ -9,20 +9,17 @@ To correct this please follow the following instructions.
 Start Docker, accept the terms and conditions. You will then get the following error.
 
 ![Graphical user interface, text, application Description automatically
-generated](media/image1.png){width="6.268055555555556in"
-height="2.29375in"}
+generated](media/image1.png)
 
 **Click Cancel rather than restart**
 
 In the Docker Window that remains open go to settings (highlighted below)
 
-![](media/image2.png){width="6.258333333333334in"
-height="3.5416666666666665in"}
+![](media/image2.png)
 
 In the settings turn Off WSL2
 
-![](media/image3.png){width="6.258333333333334in"
-height="3.558333333333333in"}
+![](media/image3.png)
 
 Then Click Apply and Restart.
 
@@ -35,5 +32,4 @@ You can test this from the command prompt by typing
 You should get the following output
 
 ![Text Description automatically
-generated](media/image4.png){width="4.833333333333333in"
-height="4.019448818897637in"}
+generated](media/image4.png)
