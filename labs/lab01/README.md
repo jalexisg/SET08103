@@ -35,10 +35,10 @@ You will require Java and IntelliJ installed on the machine you plan to work on.
 
 *Replicate the same settings as shown in the image (you can change the location).*  You need to do the following:
 
-1. Select at most 17 as the JDK for the project. The Open JDK Docker image which we will be using use version 17 and you will get errors if you choose a higher version. 
+1. Select at most 17 as the JDK for the project. The Open JDK Docker image which we will be using uses version 17 and you will get errors if you choose a higher version. 
 2. Select **Maven** as the build system
 
-
+Change the java compliance to at most 11 (below shows Java 10 on lines 11 & 12). 
 
 Click **Finish** for your new project to be created.  This should open up the following window:
 
