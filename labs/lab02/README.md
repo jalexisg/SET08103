@@ -111,7 +111,7 @@ This will create a file in your repository named
 
 `.github/workflows/main.yml`
 
-Replace the default text with the following
+Replace the default text with the following (Note that the java version should match that specified in your pom.xml file)
 
 ```yml
 name: A workflow for my Hello World App
