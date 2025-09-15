@@ -119,17 +119,18 @@ The submission is monitored during lab stand-up meetings, and formally via the 5
 
 Individual contributions to the team will be assessed by your peers and the module teaching team based on attendance at the various meetings and individual contributions towards each code review, and via the metrics gathered from tools such as GitHub.  **Individual contributions will lead to a scaling of the overall coursework grade if the module team have evidence that illustrates a lack of contribution to the team deliverable.**
 
-#### Groups must maintain a spreadsheet detailing individual team members contribution at each of the 5 assessment points
+#### Groups must maintain a spreadsheet detailing individual team members contribution at each of the assessment points. Use the Excel Template On Moodle for this.
 
 We wish to determine the individual contribution to the team project.  To do this, the team have to submit a single spreadsheet to Moodle defining the agreed contribution of each team member to the individual delivery points.  This should be submitted in percentages with the total sum of individual contributions adding up to 100% at each point of assessment.  For example:
 
-| Matriculation Number | Code Review 1 | Code Review 2 | Code Review 3 | Code Review 4 | Final Deliverable |
-| ---- | ------------- | ------------- | ------------- | ------------- | ----------------- |
-| 4000xxxx | 25          | 50          | 0.0           | 0.25          | 0.2               |
-| 4000xxxx | 25          | 50          | 0.5           | 0.25          | 0.4               |
-| 4000xxxx | 25          | 0         | 0.5           | 0.25          | 0.2               |
-| 4000xxxx | 25          | 0           | 0.0           | 0.25          | 0.2               |
-| **Total** | **100**   | **100** | **100**      | **100**   | **100** 				|
+| Matriculation Number | Code Review 1 | Code Review 2 | Code Review 3 | Code Review 4 |
+| ---- | ------------- | ------------- | ------------- | ------------- |
+| 4000xxxx | 25          | 50          | 0           | 25          |
+| 4000xxxx | 25          | 50          | 50          | 25          |
+| 4000xxxx | 25          | 0         | 50          | 25         |
+| 4000xxxx | 25          | 0           | 0           | 25          |
+| **Total** | **100**   | **100** | **100**      | **100**   |
+
 The team need to agree these scores.  **If the team cannot agree, or a team member believes the spreadsheet submitted does not represent the actual contributions, then contact a member of the teaching team.**  In these circumstances, the metrics and other information provided on GitHub will be used.
 
 The data supplied in this spreadsheet will be used to weight each team members final mark for each assessment point.
@@ -152,13 +153,12 @@ Any dismissed team member has a week to appeal the decision to the module team w
 
 Each group will undertake **four** graded code reviews as well as a final submission at the end of Week 13:
 
-Note that Teaching starts in Week 2. Week Commencing 25th January
+Note that Teaching starts in Week 2. Week Commencing 15th September
 
-1. Week 4 Code Review 1 (20% of CW mark).
-2. Week 7 Code Review 2 (20% of CW mark).
-3. Week 10 Code Review 3 (20% of CW mark).
-4. Week 13 Code Review 4 (20% of CW mark).
-5. Week 13 Final submission (20% of CW Mark)
+1. Week 4 Code Review 1 (25% of CW mark).
+2. Week 6 Code Review 2 (25% of CW mark).
+3. Week 10 Code Review 3 (25% of CW mark).
+4. Week 12 Code Review 4 (25% of CW mark).
 
 The code reviews will take place during your usual Lab sessions.  Each group will be given **15 minutes maximum** for the code review.  Your group will be **allocated a time for the code review**.  The details of the individual review points are below.  These meetings **must be attended** at the **stated time**.  Guidelines for grading the group:
 
@@ -197,7 +197,7 @@ The following criteria will be assessed for overall quality:
 
 ### Code Review 2
 
-#### REVIEW MEETING: Lab of Week 7
+#### REVIEW MEETING: Lab of Week 6
 
 The aim of this code review is to check that task management is set-up and that the initial requirements gathering has taken place via user stories and use cases.  You should have completed at least 25% of the work for the project at this point based on your own estimates.
 
@@ -252,7 +252,7 @@ The following criteria will be assessed for overall quality:
 
 ### Code Review 4
 
-#### REVIEW MEETING: Lab of Week 13
+#### REVIEW MEETING: Lab of Week 12
 
 The aim of this code review is to check that the project is deploying correctly.  At this stage, at least 75% of the work of the project should be completed.
 
@@ -275,16 +275,3 @@ The following criteria will be assessed for overall quality:
 - Quality and coverage of unit tests.
 - Project requirements met.
 
-### Final Submission (20% of CW mark)
-
-#### SUBMISSION DEADLINE: Friday at 15:00 of Week 13
-
-The final deliverable will be compared automatically to your GitHub repository.  The final submission will be assessed based on the following criteria:
-
-- Metrics from GitHub.  Also used to assess individual contribution.
-- Code quality including comments.
-- Correct usage of branches.
-- Continuous integration working.
-- Kanban/Project Board being used.
-- Quality and coverage of unit tests.
-- Project requirements met.//
