@@ -9,8 +9,8 @@ You should attempt to complete the labs individually which will give you the ski
 If you come across any errors please let me know. Please note that some of the screenshots may be out of date as IntelliJ gets updated on a regular basis but it should be straightforward to adapt to newer versions.
 
 
-|Week   | Unit                                                | Title                                                        | Lab                                                | Assessment           |
-|---------| -------------------------------------------------------- | ---- | -------------------- | -------------------- |
+|Week &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   | Unit | Title | Lab  | Assessment &nbsp; &nbsp; &nbsp;    |
+|---------| ---| ---- | ------| -------- |
 |Week 2 | 1 | [Unit 01 (a): Setting up our Working Environment](units/unit01/unit01a.md) <br> [Unit 01 (b): Forming Scrum Teams](units/unit01/unit01b.md) | [Lab 01: Setup](labs/lab01)                        | [Coursework Available](assessment) |
 |Week 3 | 2 | [Unit 02 (a): Version Control and Git](units/unit02/unit02a.md) <br> [Unit 02 (b): Lean Software Development](units/unit02/unit02b.md) | [Lab 02: Continuous Integration Setup](labs/lab02) |  |
 |Week 4 | 3 | [Unit 03 (a): Modern Software Development](units/unit03/unit03a.md) <br> [Unit 03 (b): Three Ways of DevOps](units/unit03/unit03b.md) | [Lab 03a: Requirements and issues](labs/lab03a) <br> [Lab 03b: Use Cases](labs/lab03b) | Code Review 1 |
