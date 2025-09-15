@@ -1,25 +1,30 @@
-# SET08103/SET08403 Software Engineering Methods
+# SET08103 Software Engineering Methods
 
-If you are trying to run Docker on the University machines you will get an error due to incorrect permissions. I have asked for this to be fixed but in the meantime the instructions in the following document provide a fix [DockerFix.md](DockerFix.md). 
+Welcome to the GitHub page for SET08103 Software Engineering Methods. GitHub contains all of the material for the module with the exception of the lecture slides and submission links which you will find on the Moodle page.
 
-| Week | Lectures | Lab | Assessment |
-|------|----------|-----|------------|
-| 2 | [Lecture 01: Introduction to the Module](lectures/lecture01) <br> [Lecture 02: Scrum and Team Forming](lectures/lecture02) | [Lab 01: Setup](labs/lab01) | [Coursework Released](assessment)|
-| 3 | [Lecture 03: Version Control and Git](lectures/lecture03) <br> [Lecture 04: Lean Software Development](lectures/lecture04) | [Lab 02: Continuous Integration Setup](labs/lab02) | |
-| 4 | [Lecture 05: Modern Software Development](lectures/lecture05) <br> [Lecture 06: Three Ways of DevOps](lectures/lecture06) | [Lab 03: Requirements and Issues](labs/lab03) | Code Review 1 |
-| 5 | [Lecture 07: The First Way of DevOps - Flow](lectures/lecture07) <br> [Lecture 08: Kanban](lectures/lecture08) | [Lab 04: Task Management and Kanban](labs/lab04) | |
-| 6 | [Lecture 09: Requirements Gathering](lectures/lecture09) <br> [Lecture 10: User Stories and Use Cases](lectures/lecture10) | [Lab 05: Use Cases and Use Case Diagrams](labs/lab05) | |
-| 7 | [Lecture 11: UML Diagrams](lectures/lecture11) <br> [Lecture 12: UML Workflow](lectures/lecture12) | [Lab 06: UML](labs/lab06) | Code Review 2 |
-| 8 | [Lecture 13: The Second Way of DevOps - Feedback](lectures/lecture13) <br> [Lecture 14: Test-Driven Development (TDD)](lectures/lecture14) | [Lab 07: Unit Testing](labs/lab07) | |
-| 9 | [Lecture 15: Continuous Integration](lectures/lecture15) <br> [Lecture 16: Continuous Delivery](lectures/lecture16) | [Lab 08: Integration Testing](labs/lab08) | |
-| 10 | [Lecture 17: Deployment](lectures/lecture17) <br> [Lecture 18: Monitoring Software](lectures/lecture18) | [Lab 09: Deployment](labs/lab09) | Code Review 3 |
-| 11 | [Lecture 19: Bug Tracking](lectures/lecture19) <br> [Lecture 20: The Third Way of DevOps - Continuous Experimentation and Learning](lectures/lecture20) | [Lab 10: Bug Tracking](labs/lab10) | |
-| Easter break |  |  | |
-| 12 | [Lecture 21: Ethics and Professionalism](lectures/lecture21) <br> [Lecture 22: Legal Issues](lectures/lecture22) | [Lab 11: Code Quality](labs/lab11) |  |
-| 13 | [Lecture 23: Computer Security](lectures/lecture23) <br> [Lecture 24: Review](lectures/lecture24) | [Lab 12: Final Deliverable](labs/lab12) | Final Deliverable Code Review 4 |
+Before commencing the module you should view the introduction to the module on Moodle
+
+You should attempt to complete the labs individually which will give you the skills to contribute towards your group coursework 
+
+If you come across any errors please let me know. Please note that some of the screenshots may be out of date as IntelliJ gets updated on a regular basis but it should be straightforward to adapt to newer versions.
+
+
+|Week   | Unit                                                | Title                                                        | Lab                                                | Assessment           |
+|---------| -------------------------------------------------------- | ---- | -------------------- | -------------------- |
+|Week 2 | 1 | [Unit 01 (a): Setting up our Working Environment](units/unit01/unit01a.md) <br> [Unit 01 (b): Forming Scrum Teams](units/unit01/unit01b.md) | [Lab 01: Setup](labs/lab01)                        | [Coursework Available](assessment) |
+|Week 3 | 2 | [Unit 02 (a): Version Control and Git](units/unit02/unit02a.md) <br> [Unit 02 (b): Lean Software Development](units/unit02/unit02b.md) | [Lab 02: Continuous Integration Setup](labs/lab02) |  |
+|Week 4 | 3 | [Unit 03 (a): Modern Software Development](units/unit03/unit03a.md) <br> [Unit 03 (b): Three Ways of DevOps](units/unit03/unit03b.md) | [Lab 03a: Requirements and issues](labs/lab03a) <br> [Lab 03b: Use Cases](labs/lab03b) | Code Review 1 |
+|Week 5 | 4 | [Unit 04 (a): The First Way of DevOps - Flow](units/unit04/unit04a.md) <br> [Unit 04 (b): Kanban](units/unit04/unit04b.md) | [Lab 04: Task Management and Kanban](labs/lab04) |  |
+| Week 6 | 5 |[Unit 05 (a): Requirements Gathering](units/unit05/unit05a.md) <br> [Unit 05 (b): User Stories and Use Cases](units/unit05/unit05b.md) | [Lab 05: UML](labs/lab05)                          | Code Review 2 |
+|Week 7 | | Reading Week  |  ||
+|Week 8 | 6 | [Unit 06 (a): UML Diagrams](units/unit06/unit06a.md) <br> [Unit 06 (b): UML Workflow](units/unit06/unit06b.md) | [Lab 06: Unit Testing](labs/lab06) |  |
+|Week 9 | 7 | [Unit 07 (a): The Second Way of DevOps - Feedback](units/unit07/unit07a.md) <br> [Unit 07 (b) Test-Driven Development (TDD)](units/unit07/unit07b.md) | [Lab 07: Integration Testing](labs/lab07) |                      |
+|Week 10 | 8 | [Unit 08 (a): Continuous Integration](units/unit08/unit08a.md) <br> [Unit 08 (b): Continuous Delivery](units/unit08/unit08b.md) | [Needs reduced Lab 08: Deployment](labs/lab08) | Code Review 3 |
+|Week 11 | 9 | [Unit 09 (a): The Third Way of DevOps - Continuous Experimentation and Learning](units/unit09/unit09a.md) <br> [Unit 09 (b): Bug Tracking and Monitoring](units/unit09/unit09b.md) | [Lab 09: Bug Tracking](labs/lab09) |  |
+|Week 12 | 10      | [Unit 10 (a): Ethics and Professionalism](units/unit10/unit10a.md) <br> [Unit 10 (b): Legal Issues](units/unit10/unit10b.md)<br>[Unit 10 (c): Computer Security](units/unit10/unit10c.md)  | [Lab 10: Code Quality](labs/lab10)               | Code Review 4 |
 
 ## Copyright Notice
 
-All material provided is developed by Kevin Chalmers and modified by Kevin Sim and is &copy; 2019 Edinburgh Napier University unless otherwise stated.  Use and copying of this material is permitted under the Apache 2.0 license with suitable attribution given to the author.
+All material provided is developed by Kevin Chalmers and modified by Kevin Sim and Andreas Steyven and is © 2025 Edinburgh Napier University unless otherwise stated. Use and copying of this material is permitted under the Apache 2.0 license with suitable attribution given to the author.
 
 The author accepts no liability in the use of this material.

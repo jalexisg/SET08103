@@ -27,4 +27,8 @@ hs_err_pid*
 
 *.docx
 pandoc.txt
+pandoc.exe
+labs/lab01quick/
+labs/lab02quick/
+labs/lab03quick/
 

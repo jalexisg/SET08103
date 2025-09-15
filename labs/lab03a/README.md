@@ -1,4 +1,4 @@
-# Lab 03: Requirements and Issues
+# Lab 03a: Requirements and Issues
 
 In this lab we will use GitHub issues to start tracking our work.  This is stage one of starting a Kanban system to monitor our work.  We will start by defining our **Vision** for the application, using this to define **features**, and from these **User Stories**.
 
@@ -150,7 +150,7 @@ Next we need a Dockerfile to run a MySQL database instance with the given files.
 
 ```dockerfile
 # Use the latest MySQL image
-FROM mysql
+FROM mysql/mysql-server:latest
 # Set the working directory
 WORKDIR /tmp
 # Copy all the files to the working directory of the container
@@ -207,8 +207,9 @@ services:
   # db is is db folder
   db:
     build: db/.
-    command: --default-authentication-plugin=mysql_native_password
     restart: always
+    ports:
+      - "33060:3306"
 ```
 
 When running Docker from the command line, we use `docker-compose up` to build and run a composed service.  IntelliJ understands Docker compose files, so we don't have to worry.  We will modify our GitHub Actions file.
@@ -230,7 +231,7 @@ First, we need to update the `pom.xml` file to add MySQL support.  Open the file
 Now we need to update our main application to move from MongoDB to MySQL.  A MySQL server takes a bit more time to start-up, so we need to have code to attempt to connect multiple times.  The Java code below is our new application.
 
 ```java
-package com.napier.sem;
+package com.napier.devops;
 
 import java.sql.*;
 
@@ -316,18 +317,18 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           submodules: recursive
       - name: Set up JDK 11
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v4
         with:
           java-version: '11'
           distribution: 'adopt'
       - name: Build with Maven
         run: mvn package
       - name: Run docker compose
-        run: docker-compose up --abort-on-container-exit
+        run: docker compose up --abort-on-container-exit
 
 
 ```
@@ -466,7 +467,7 @@ Even this small change is a commit point through our history.  Create a new comm
 
 We are now ready to add a new method to extract the employee information.  To make life easier, we will create an `Employee` class.  To do this, perform the following steps:
 
-1. **Right-click** on the **com.sem.napier** package in the **Project** explorer in IntelliJ.
+1. **Right-click** on the **com.devops.napier** package in the **Project** explorer in IntelliJ.
 2. Select **New**, **Java Class** to open the **Create New Class** window.
 3. Call the class **Employee** and click **OK**.
 
@@ -474,10 +475,10 @@ We are now ready to add the `Employee` class.
 
 #### Employee Class
 
-The `Employee` class is just data.  An example code listing is given below, and should be straightforward to understand. 
+The `Employee` class is just data.  The full code listing is given below, and should be straightforward to understand.
 
 ```java
-package com.napier.sem;
+package com.napier.devops;
 
 /**
  * Represents an employee
@@ -646,7 +647,7 @@ Manager: null
 OK, if this didn't work, try the following first:
 
 - Make sure you have performed the following steps via Maven: **Compile** and **Package**.
-- Stop all the running containers, delete them, and delete the current `sem_db` and `sem_app` Docker images.  Then rebuild everything and restart.
+- Stop all the running containers, delete them, and delete the current `devops_db` and `devops_app` Docker images.  Then rebuild everything and restart.
 - Make sure the SQL connection string is correct and the logs from the running database and application.
 
 If this doesn't solve the problem them ask for help.
@@ -693,67 +694,3 @@ Our current process has not changed from last week, except we are now using GitH
 ## Exercise
 
 Follow the [SQL and Java tutorial](https://www.tutorialspoint.com/jdbc/) to explore this topic further.  You will find it useful.
-
-## Additional Notes
-
-The following supplementary notes are provided to allow quicker debugging and testing of SQL queries when using docker databases.
-
-So far we have used `docker-compose` to call two Dockerfile configuration scripts that create and run two Docker images that are connected on the same network (this is automatic using docker-compose)  
-
-Our `docker-compose` file shown below creates and runs 2 images.
-
-Lines 4-5 create an image called app (if it does not exist) using the Dockerfile in the root directory of our project (signified by a "." at the end of line 5 below)
-
-Lines 8-11 create an image called db using the Dockerfile in the directory name db/.
-
-```yml
-1	version: '3'
-2	services:
-3	  # Application Dockerfile is in same folder which is .
-4	  app:
-5	    build: .
-6	
-7	  # db is is db folder
-8	  db:
-9	    build: db/.
-10	    command: --default-authentication-plugin=mysql_native_password
-11	    restart: always
-```
-By running the Docker images using `docker-compose` the two containers can communicate on a shared network (something we did manually last week for a mongo database)
-
-However, we cannot see the MySQL database outside of the internal docker network. 
-
-To expose the database to the local machine we can set up port forwarding by adding the last two lines of the following to our `docker.compose.yml` file.
-
-```yml
-1	version: '3'
-2	services:
-3	  # Application Dockerfile is in same folder which is .
-4	  app:
-5	    build: .
-6	
-7	  # db is is db folder
-8	  db:
-9	    build: db/.
-10	    command: --default-authentication-plugin=mysql_native_password
-11	    restart: always
-12	    ports:
-13	      - "33060:3306"
-```
-
-This tells docker to forward requests from our local machine on port 33060 to port 3306 inside the docker container.
-
-We can now connect locally without having to do so from another docker container.
-
-IntelliJ allows database queries to be executed using a plugin named Database Navigator. To install this plugin select `File->Settings` then `Plugins` From the marketplace tab search for and install the plugin.
-
-![Database Plugin](img/databaseplugin.png)
-
-After doing this you should see a database tab on the right of IntelliJ where you can set up a new MySQL Connection. The fields should all be filled automatically with the exception of the password which is `example`
-
-![MySQL Connection](img/sqlconnection.png)
-
-This will allow you to test SQL queries before coding them in Java and testing in a docker container.
-
-
-
