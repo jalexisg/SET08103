@@ -200,13 +200,11 @@ In IntelliJ, **right-click** on the folder **devops->src->main->java** and selec
 
 ![IntelliJ New Package](img/intellij-new-package.png)
 
-Call the package `com.napier.devops` and click **OK**.  Your **Project Structure** in IntelliJ should now look as follows:
+Call the package `com.napier.sem and click **OK**.  Your **Project Structure** in IntelliJ should now look as follows:
 
 ![IntelliJ Project Package](img/intellij-project-package.png)
 
-Now **right-click** on **com.napier.devops** and select **New** and **Class** to open the **New Class** window:
-
-![IntelliJ New Class](img/intellij-new-class.png)
+Now **right-click** on **com.napier.sem** and select **New** and **Class** to open the **New Class** window:
 
 Call the class **App** and click **OK**.  IntelliJ will helpfully ask if you want to add the file to your Git repository.  Select **Yes**.
 
