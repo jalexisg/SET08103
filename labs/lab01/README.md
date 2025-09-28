@@ -14,7 +14,7 @@ Fix: Open the Local group policy editor -> start menu-> run and type **gpedit.ms
 
 
 
-![1758285575988](img\1758285575988.png)
+![1758285575988](img/1758285575988.png)
 
 2) Problem: wsl --update stuck at 0%
 
