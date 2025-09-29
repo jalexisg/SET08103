@@ -6,7 +6,7 @@ Group times are available [here](groups).
 
 | | |
 | --- | --- |
-| Module number | SET08103-SET08403 |
+| Module number | SET08103 |
 | Module title | Software Engineering Methods |
 | Module leader | Kevin Sim |
 | Tutor with responsibility for this Assessment. Student's first point of contact. | As above. |
@@ -113,7 +113,7 @@ For the population reports, the following information is requested:
 
 The coursework **must** be delivered by a group.  The aim of the module is to assess your ability to work as a team to deliver a product.  Therefore, the majority of your coursework grade will be based on your team's ability to work together using the methods defined in the module.
 
-The submission is monitored during lab stand-up meetings, and formally via the 5 assessment points.  Your submissions are delivered via your GitHub repository. The master branch of your GitHub repository should also be submitted to Moodle at each assessment point along with a spreadsheet in Excel format (csv, xls or xlsx) detailing Individual team members' contributions.
+The submission is monitored during lab stand-up meetings, and formally via the 4 assessment points.  Your submissions are delivered via your GitHub repository. The master branch of your GitHub repository should also be submitted to Moodle at each assessment point along with a spreadsheet in Excel format (csv, xls or xlsx) detailing Individual team members' contributions.
 
 ## Individual Assessment
 
@@ -151,7 +151,7 @@ Any dismissed team member has a week to appeal the decision to the module team w
 
 ## Code Review Meetings
 
-Each group will undertake **four** graded code reviews as well as a final submission at the end of Week 13:
+Each group will undertake **four** graded code reviews:
 
 Note that Teaching starts in Week 2. Week Commencing 15th September
 
