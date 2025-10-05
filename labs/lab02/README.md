@@ -241,7 +241,7 @@ Update the `README.md` as below (keep the other badges):
 
 ```markdown
 # DevOps
-![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/<username>/<repository>/<action name taken from main.yml>/<branch>?style=flat-square)
+![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/<username>/<repository>/<workflow file name (main.yml)>?<branch>=develop&style=flat-square)
 ```
 
 And add this to GitHub:
